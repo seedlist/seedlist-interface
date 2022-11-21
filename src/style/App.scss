@@ -1,0 +1,118 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  background-color: #1a1d22 !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  overscroll-behavior: none !important;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+
+  button {
+    &.css-chakra-button {
+      box-shadow: none;
+    }
+  }
+  input{
+    color: white !important;
+  }
+}
+
+#__next {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  box-shadow: none !important;
+}
+
+.frame img {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  height: 100%;
+  background-color: #ddc;
+  border: solid 4vmin #eee;
+  border-bottom-color: #fff;
+  border-left-color: #eee;
+  border-radius: 2px;
+  border-right-color: #eee;
+  border-top-color: #ddd;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset,
+  0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  padding: 2vmin;
+  position: relative;
+  text-align: center;
+}
+
+.frame:before {
+  border-radius: 2px;
+  bottom: -2vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: "";
+  left: -2vmin;
+  position: absolute;
+  right: -2vmin;
+  top: -2vmin;
+}
+
+.frame:after {
+  border-radius: 2px;
+  bottom: -2.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: "";
+  left: -2.5vmin;
+  position: absolute;
+  right: -2.5vmin;
+  top: -2.5vmin;
+}
+
+.bn-onboard-modal {
+  z-index: 1000;
+}
+
+.chakra-slide.chakra-modal__content {
+  background-color: #2b2d32;
+
+  .chakra-modal__close-btn {
+    box-shadow: none;
+    &:hover {
+      background: rgba(255,255,255,0.08);
+    }
+    &:active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .chakra-icon.css-onkibi {
+      color: white;
+    }
+  }
+}

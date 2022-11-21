@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2022-04-06 12:18+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: es-ES\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "1. 21 million tokens are given to community users as an incentive cycle;"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "2. Incentives are generated along with the user's storage behavior. If there is no storage, there will be no incentives;"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "3. In the first cycle, the excitation amount is 2100 each time it is stored;"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "4. When entering the next cycle, each excitation amount is half of the previous cycle;"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+#~ msgid "5. With each user's token incentive, a 10% increment will be issued to the DAO address;"
+#~ msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "5. With each user's token incentive, a 10% increment will be issued to the treasury address;"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "6. Using the displacement halving, the total amount of token incentives for a complete cycle is about 23.1 million;"
+msgstr ""
+
+#: src/components/Buttons/save.tsx
+msgid "Add More"
+msgstr ""
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "Address"
+msgstr ""
+
+#: src/components/Header/routers.tsx
+msgid "AnyMap"
+msgstr ""
+
+#: src/components/Header/menu.tsx
+msgid "Arbitrum Mainnet"
+msgstr ""
+
+#: src/components/Header/menu.tsx
+#~ msgid "Arbitrum Network"
+#~ msgstr ""
+
+#: src/pages/donate/index.tsx
+msgid "BTC Donate Address"
+msgstr ""
+
+#: src/components/Labels/bitcoin.tsx
+msgid "Bitcoin"
+msgstr ""
+
+#: src/components/Dialog/BitcoinAddress.tsx
+msgid "Bitcoin Address:"
+msgstr ""
+
+#: src/components/Header/routers.tsx
+msgid "Brain Address"
+msgstr ""
+
+#: src/components/Header/routers.tsx
+#~ msgid "Brain Wallet"
+#~ msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Bridge Model"
+msgstr ""
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Cancel"
+msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+msgid "Connect Wallet"
+msgstr ""
+
+#: src/components/Labels/singup.tsx
+msgid "Create Vault"
+msgstr ""
+
+#: src/components/Footer/index.tsx
+msgid "Docs"
+msgstr ""
+
+#: src/components/Footer/index.tsx
+msgid "Donate Me"
+msgstr ""
+
+#: src/components/Footer/index.tsx
+msgid "Download Zip"
+msgstr ""
+
+#: src/pages/donate/index.tsx
+#~ msgid "ERC20/ETH Donate Address"
+#~ msgstr ""
+
+#: src/pages/donate/index.tsx
+msgid "ETH(ERC20) Donate Address"
+msgstr ""
+
+#: src/components/Labels/ethereum.tsx
+msgid "Ethereum"
+msgstr ""
+
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "Ethereum Address:"
+msgstr ""
+
+#: src/components/Header/menu.tsx
+msgid "Ethereum Mainnet"
+msgstr ""
+
+#: src/components/Footer/index.tsx
+msgid "Forum"
+msgstr ""
+
+#: src/components/Footer/index.tsx
+msgid "Github"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Hidden Model"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "I want to mint seed incentive token"
+msgstr ""
+
+#: src/components/Header/routers.tsx
+#~ msgid "Identity"
+#~ msgstr ""
+
+#: src/components/Buttons/signup.tsx
+msgid "Let's Create"
+msgstr ""
+
+#: src/components/Buttons/wallet.tsx
+msgid "Let's Generate"
+msgstr ""
+
+#: src/components/Buttons/query.tsx
+msgid "Let's Query"
+msgstr ""
+
+#: src/components/Buttons/save.tsx
+msgid "Let's Save"
+msgstr ""
+
+#: src/components/Buttons/signup.tsx
+#~ msgid "Let's Sign"
+#~ msgstr ""
+
+#: src/components/Footer/index.tsx
+#~ msgid "License"
+#~ msgstr ""
+
+#: src/components/Header/routers.tsx
+#~ msgid "Meta Identity"
+#~ msgstr ""
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "More Address"
+msgstr ""
+
+#: src/components/Buttons/save.tsx
+#: src/components/Buttons/signup.tsx
+#: src/components/Buttons/unconnect.tsx
+msgid "Please connect wallet firstly"
+msgstr ""
+
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Please enter your password"
+msgstr ""
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "PrivateKey"
+msgstr ""
+
+#: src/components/Labels/query.tsx
+msgid "Query"
+msgstr ""
+
+#: src/components/menu/brainwallet.tsx
+msgid "Random Puzzle"
+msgstr ""
+
+#: src/components/Header/menu.tsx
+msgid "Rinkeby Test Network"
+msgstr ""
+
+#: src/components/Labels/save.tsx
+msgid "Save"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Save Model:"
+msgstr ""
+
+#: src/components/Labels/singup.tsx
+#~ msgid "Sign Up"
+#~ msgstr ""
+
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Submit"
+msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+msgid "Switch"
+msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+#~ msgid "Switch Wallet"
+#~ msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+#~ msgid "Switch to"
+#~ msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Token Address:"
+msgstr ""
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Token Receiver:"
+msgstr ""
+
+#: src/components/Labels/singup.tsx
+msgid "User have to create a private vault before save or query content."
+msgstr ""
+
+#: src/components/Labels/singup.tsx
+#~ msgid "User have to sign up a spacename before save or query content."
+#~ msgstr ""
+
+#: src/components/Header/routers.tsx
+msgid "Vault"
+msgstr ""
+
+#: src/components/menu/brainwallet.tsx
+msgid "VaultName&Password"
+msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+msgid "Wallet"
+msgstr ""
+
+#: src/components/Header/seedlist.tsx
+msgid "version"
+msgstr ""

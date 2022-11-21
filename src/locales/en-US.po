@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2022-04-06 12:18+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en-US\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "1. 21 million tokens are given to community users as an incentive cycle;"
+msgstr "1. 21 million tokens are given to community users as an incentive cycle;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "2. Incentives are generated along with the user's storage behavior. If there is no storage, there will be no incentives;"
+msgstr "2. Incentives are generated along with the user's storage behavior. If there is no storage, there will be no incentives;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "3. In the first cycle, the excitation amount is 2100 each time it is stored;"
+msgstr "3. In the first cycle, the excitation amount is 2100 each time it is stored;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "4. When entering the next cycle, each excitation amount is half of the previous cycle;"
+msgstr "4. When entering the next cycle, each excitation amount is half of the previous cycle;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+#~ msgid "5. With each user's token incentive, a 10% increment will be issued to the DAO address;"
+#~ msgstr "5. With each user's token incentive, a 10% increment will be issued to the DAO address;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "5. With each user's token incentive, a 10% increment will be issued to the treasury address;"
+msgstr "5. With each user's token incentive, a 10% increment will be issued to the treasury address;"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "6. Using the displacement halving, the total amount of token incentives for a complete cycle is about 23.1 million;"
+msgstr "6. Using the displacement halving, the total amount of token incentives for a complete cycle is about 23.1 million;"
+
+#: src/components/Buttons/save.tsx
+msgid "Add More"
+msgstr "Add More"
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "Address"
+msgstr "Address"
+
+#: src/components/Header/routers.tsx
+msgid "AnyMap"
+msgstr "AnyMap"
+
+#: src/components/Header/menu.tsx
+msgid "Arbitrum Mainnet"
+msgstr "Arbitrum Mainnet"
+
+#: src/components/Header/menu.tsx
+#~ msgid "Arbitrum Network"
+#~ msgstr "Arbitrum Network"
+
+#: src/pages/donate/index.tsx
+msgid "BTC Donate Address"
+msgstr "BTC Donate Address"
+
+#: src/components/Labels/bitcoin.tsx
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+#: src/components/Dialog/BitcoinAddress.tsx
+msgid "Bitcoin Address:"
+msgstr "Bitcoin Address:"
+
+#: src/components/Header/routers.tsx
+msgid "Brain Address"
+msgstr "Brain Address"
+
+#: src/components/Header/routers.tsx
+#~ msgid "Brain Wallet"
+#~ msgstr "Brain Wallet"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Bridge Model"
+msgstr "Bridge Model"
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/components/Wallet/wallet.tsx
+msgid "Connect Wallet"
+msgstr "Connect Wallet"
+
+#: src/components/Labels/singup.tsx
+msgid "Create Vault"
+msgstr "Create Vault"
+
+#: src/components/Footer/index.tsx
+msgid "Docs"
+msgstr "Docs"
+
+#: src/components/Footer/index.tsx
+msgid "Donate Me"
+msgstr "Donate Me"
+
+#: src/components/Footer/index.tsx
+msgid "Download Zip"
+msgstr "Download Zip"
+
+#: src/pages/donate/index.tsx
+#~ msgid "ERC20/ETH Donate Address"
+#~ msgstr "ERC20/ETH Donate Address"
+
+#: src/pages/donate/index.tsx
+msgid "ETH(ERC20) Donate Address"
+msgstr "ETH(ERC20) Donate Address"
+
+#: src/components/Labels/ethereum.tsx
+msgid "Ethereum"
+msgstr "Ethereum"
+
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "Ethereum Address:"
+msgstr "Ethereum Address:"
+
+#: src/components/Header/menu.tsx
+msgid "Ethereum Mainnet"
+msgstr "Ethereum Mainnet"
+
+#: src/components/Footer/index.tsx
+msgid "Forum"
+msgstr "Forum"
+
+#: src/components/Footer/index.tsx
+msgid "Github"
+msgstr "Github"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Hidden Model"
+msgstr "Hidden Model"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "I want to mint seed incentive token"
+msgstr "I want to mint seed incentive token"
+
+#: src/components/Header/routers.tsx
+#~ msgid "Identity"
+#~ msgstr "Identity"
+
+#: src/components/Buttons/signup.tsx
+msgid "Let's Create"
+msgstr "Let's Create"
+
+#: src/components/Buttons/wallet.tsx
+msgid "Let's Generate"
+msgstr "Let's Generate"
+
+#: src/components/Buttons/query.tsx
+msgid "Let's Query"
+msgstr "Let's Query"
+
+#: src/components/Buttons/save.tsx
+msgid "Let's Save"
+msgstr "Let's Save"
+
+#: src/components/Buttons/signup.tsx
+#~ msgid "Let's Sign"
+#~ msgstr "Let's Sign"
+
+#: src/components/Footer/index.tsx
+#~ msgid "License"
+#~ msgstr "License"
+
+#: src/components/Header/routers.tsx
+#~ msgid "Meta Identity"
+#~ msgstr "Meta Identity"
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "More Address"
+msgstr "More Address"
+
+#: src/components/Buttons/save.tsx
+#: src/components/Buttons/signup.tsx
+#: src/components/Buttons/unconnect.tsx
+msgid "Please connect wallet firstly"
+msgstr "Please connect wallet firstly"
+
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Please enter your password"
+msgstr "Please enter your password"
+
+#: src/components/Dialog/BitcoinAddress.tsx
+#: src/components/Dialog/EthereumAddress.tsx
+msgid "PrivateKey"
+msgstr "PrivateKey"
+
+#: src/components/Labels/query.tsx
+msgid "Query"
+msgstr "Query"
+
+#: src/components/menu/brainwallet.tsx
+msgid "Random Puzzle"
+msgstr "Random Puzzle"
+
+#: src/components/Header/menu.tsx
+msgid "Rinkeby Test Network"
+msgstr "Rinkeby Test Network"
+
+#: src/components/Labels/save.tsx
+msgid "Save"
+msgstr "Save"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Save Model:"
+msgstr "Save Model:"
+
+#: src/components/Labels/singup.tsx
+#~ msgid "Sign Up"
+#~ msgstr "Sign Up"
+
+#: src/components/Dialog/PasswordInQuery.tsx
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Submit"
+msgstr "Submit"
+
+#: src/components/Wallet/wallet.tsx
+msgid "Switch"
+msgstr "Switch"
+
+#: src/components/Wallet/wallet.tsx
+#~ msgid "Switch Wallet"
+#~ msgstr "Switch Wallet"
+
+#: src/components/Wallet/wallet.tsx
+#~ msgid "Switch to"
+#~ msgstr "Switch to"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
+msgstr "This is an operation for advanced users, if you want to use it, please contact the developer:"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Token Address:"
+msgstr "Token Address:"
+
+#: src/components/Dialog/PasswordInSave.tsx
+msgid "Token Receiver:"
+msgstr "Token Receiver:"
+
+#: src/components/Labels/singup.tsx
+msgid "User have to create a private vault before save or query content."
+msgstr "User have to create a private vault before save or query content."
+
+#: src/components/Labels/singup.tsx
+#~ msgid "User have to sign up a spacename before save or query content."
+#~ msgstr "User have to sign up a spacename before save or query content."
+
+#: src/components/Header/routers.tsx
+msgid "Vault"
+msgstr "Vault"
+
+#: src/components/menu/brainwallet.tsx
+msgid "VaultName&Password"
+msgstr "VaultName&Password"
+
+#: src/components/Wallet/wallet.tsx
+msgid "Wallet"
+msgstr "Wallet"
+
+#: src/components/Header/seedlist.tsx
+msgid "version"
+msgstr "version"
