@@ -54,9 +54,9 @@ class CryptoTools extends CryptoConstants{
 		return this.CHARS[parseInt(deep, 16)%this.CHARS.length];
 	}
 
-	calculateValidSeed(str1:string, str2:string):string{
-		let h1 = ethers.utils.sha512(ethers.utils.toUtf8Bytes(str1));
-		let h2 = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(str2));
+	calculateValidSeed(str1:string, str2:string, salt:string=""):string{
+		let h1 = ethers.utils.sha512(ethers.utils.toUtf8Bytes(str1+salt));
+		let h2 = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(str2+salt));
 		let saltStr = "";
 		for(let i=0;i<this.SALT_LEN; i++){
 			let saltChar = this.getSaltChar(ethers.utils.ripemd160(ethers.utils.toUtf8Bytes(h1+h2+saltStr)));
@@ -97,8 +97,8 @@ class CryptoTools extends CryptoConstants{
 		return CryptoJS.AES.decrypt(decryptMsg,password+ethers.utils.sha512(pair.privKey)).toString(CryptoJS.enc.Utf8)
 	}
 
-	calculateMainPairs(vaultName:string, password:string) {
-		let seed = this.calculateValidSeed(vaultName, password);
+	calculateMainPairs(vaultName:string, password:string, salt:string="") {
+		let seed = this.calculateValidSeed(vaultName, password, salt);
 		return this.calculatePairsBaseOnSeed(seed);
 	}
 
@@ -111,8 +111,6 @@ class CryptoMachine2022 extends CryptoTools{
 
 	constructor(vaultName:string, password:string, chainId:number) {
 		super();
-		let pairs = this.calculateMainPairs(vaultName, password);
-		this.Wallet = new ethers.Wallet(pairs.privKey);
 		if(chainId===1){
 			this.domainSeparator = ETH_DOMAIN_SEPARATOR;
 		}
@@ -122,6 +120,8 @@ class CryptoMachine2022 extends CryptoTools{
 		if(chainId===137){
 			this.domainSeparator = POLYGON_DOMAIN_SEPARATOR;
 		}
+		let pairs = this.calculateMainPairs(vaultName, password, this.domainSeparator);
+		this.Wallet = new ethers.Wallet(pairs.privKey);
 	}
 	async generateWallet(vaultName:string, password:string){
 		this.mainAddress= await this.Wallet.getAddress();
