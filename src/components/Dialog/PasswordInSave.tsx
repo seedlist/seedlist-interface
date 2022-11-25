@@ -226,7 +226,6 @@ const PasswordInSave:React.FC<IBaseProps> = (props:IBaseProps)=>{
 					mintedSaveParams.signature.s, mintedSaveParams.signature.v,{value:savingPrivateDataFee});
 			}catch (e) {
 				setSaveBtnIsLoading(false);
-				console.log("save with minting err:", e)
 				return;
 			}
 

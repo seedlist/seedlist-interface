@@ -369,7 +369,6 @@ class PrivateVaultClient {
 		if(this.provider === undefined || this.seedlist === undefined || this.signer === undefined){
 			return Promise.reject("need to connect a valid provider and signer")
 		}
-		console.log("in privateVault, params:", params);
 		const gas=await this.seedlist.connect(this.signer).estimateGas.saveWithoutMintingDirectly( data, cryptoLabel, labelHash, deadline, v, r, s, params, {...config})
 		const transaction = await this.seedlist.connect(this.signer).saveWithoutMintingDirectly(
 			data, cryptoLabel, labelHash, deadline, v, r, s, params,{ gasLimit:gas.mul(13).div(10), ...config })

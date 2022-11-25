@@ -24,7 +24,7 @@ const Donate:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
 						<Box>
 							<Center>
-								<Text> <Trans>ETH/BSC/MATIC Donate Address</Trans>: </Text>
+								<Text> <Trans>ETH/BNB/MATIC Donate Address</Trans>: </Text>
 							</Center>
 							<Center>
 								<Image marginY="10px" src="./media/ERC20.png" width="120" height="120" />

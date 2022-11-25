@@ -59,7 +59,6 @@ export function GenBitcoinBrainWalletByEntropy(from:number=0, end:number, vaultN
 	let cryptor = new CryptoTools();
 	let puzzle = cryptor.calculateValidSeed(vaultName, password);
 	let entropy = ethers.utils.keccak256(ethers.utils.toUtf8Bytes(puzzle)).substring(2);
-	console.log("entropy:", Buffer.from(entropy, "hex"));
 	let mnemonic = bip39.entropyToMnemonic(Buffer.from(entropy, "hex"));
 	let seed = bip39.mnemonicToSeedSync(mnemonic, passphrase);
 	let master = fromSeed(seed); // m
