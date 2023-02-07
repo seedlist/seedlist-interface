@@ -4,11 +4,14 @@ import React, {useMemo, useState} from "react";
 import {IBaseProps} from "../../interfaces/props";
 import {useRecoilState} from "recoil";
 import {languageState, vaultNameState} from "../../hooks/Atoms";
+import {useSelector} from "react-redux";
+import {StateType} from "../../reducers/state";
 
 const QueryArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [lang, ] = useRecoilState(languageState)
 	const [spaceNameHolder, setSpaceNameHolder]	= useState<string>("Enter vault name ...")
 
+	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	const [vaultName, setVaultName] = useRecoilState(vaultNameState);
 	const handleVaultNameChange = (event: React.FormEvent<HTMLInputElement>)=>setVaultName(event.currentTarget.value)
 
@@ -36,6 +39,7 @@ const QueryArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	                    placeholder={spaceNameHolder}
 	                    type={'text'}
 	                    value={vaultName}
+	                    disabled={!isConnection}
 	                    onChange={handleVaultNameChange}
                     />
                 </Stack>

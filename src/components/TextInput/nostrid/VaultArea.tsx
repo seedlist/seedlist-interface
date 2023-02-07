@@ -62,6 +62,7 @@ const NostridVaultArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 						placeholder={spaceNameHolder}
 						type={'text'}
 						value={spaceValue}
+						disabled={!isConnection}
 						onChange={handleSpaceChange}
 					/>
 				</Stack>
@@ -78,6 +79,7 @@ const NostridVaultArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 						type={'password'}
 						placeholder={passwordHolder}
 						value={pwdValue}
+						disabled={!isConnection}
 						onChange={handlePwdChange}
 					/>
 				</Stack>
