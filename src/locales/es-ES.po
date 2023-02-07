@@ -51,12 +51,12 @@ msgid "Address"
 msgstr ""
 
 #: src/components/Header/routers.tsx
-msgid "AnyMap"
-msgstr ""
+#~ msgid "AnyMap"
+#~ msgstr ""
 
 #: src/components/Header/menu.tsx
-msgid "Arbitrum Mainnet"
-msgstr ""
+#~ msgid "Arbitrum Mainnet"
+#~ msgstr ""
 
 #: src/components/Header/menu.tsx
 #~ msgid "Arbitrum Network"
@@ -64,6 +64,14 @@ msgstr ""
 
 #: src/pages/donate/index.tsx
 msgid "BTC Donate Address"
+msgstr ""
+
+#: src/components/Labels/nostr-puzzle.tsx
+msgid "Base on Puzzle"
+msgstr ""
+
+#: src/components/Labels/nostr-vault.tsx
+msgid "Base on Vault"
 msgstr ""
 
 #: src/components/Labels/bitcoin.tsx
@@ -83,11 +91,12 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Bridge Model"
-msgstr ""
+#~ msgid "Bridge Model"
+#~ msgstr ""
 
 #: src/components/Dialog/BitcoinAddress.tsx
 #: src/components/Dialog/EthereumAddress.tsx
+#: src/components/Dialog/NostrIds.tsx
 #: src/components/Dialog/PasswordInQuery.tsx
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Cancel"
@@ -110,15 +119,19 @@ msgid "Donate Me"
 msgstr ""
 
 #: src/components/Footer/index.tsx
-msgid "Download Zip"
-msgstr ""
+#~ msgid "Download Zip"
+#~ msgstr ""
 
 #: src/pages/donate/index.tsx
 #~ msgid "ERC20/ETH Donate Address"
 #~ msgstr ""
 
 #: src/pages/donate/index.tsx
-msgid "ETH(ERC20) Donate Address"
+#~ msgid "ETH(ERC20) Donate Address"
+#~ msgstr ""
+
+#: src/pages/donate/index.tsx
+msgid "ETH/BNB/MATIC Donate Address"
 msgstr ""
 
 #: src/components/Labels/ethereum.tsx
@@ -130,8 +143,8 @@ msgid "Ethereum Address:"
 msgstr ""
 
 #: src/components/Header/menu.tsx
-msgid "Ethereum Mainnet"
-msgstr ""
+#~ msgid "Ethereum Mainnet"
+#~ msgstr ""
 
 #: src/components/Footer/index.tsx
 msgid "Forum"
@@ -142,8 +155,8 @@ msgid "Github"
 msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Hidden Model"
-msgstr ""
+#~ msgid "Hidden Model"
+#~ msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "I want to mint seed incentive token"
@@ -157,6 +170,7 @@ msgstr ""
 msgid "Let's Create"
 msgstr ""
 
+#: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/wallet.tsx
 msgid "Let's Generate"
 msgstr ""
@@ -186,9 +200,24 @@ msgstr ""
 msgid "More Address"
 msgstr ""
 
+#: src/components/Dialog/NostrIds.tsx
+msgid "More Id"
+msgstr ""
+
+#: src/components/Header/routers.tsx
+msgid "Nostr ID"
+msgstr ""
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "Nostr Id:"
+msgstr ""
+
+#: src/components/Buttons/nostrid.tsx
+#: src/components/Buttons/query.tsx
 #: src/components/Buttons/save.tsx
 #: src/components/Buttons/signup.tsx
 #: src/components/Buttons/unconnect.tsx
+#: src/components/Buttons/wallet.tsx
 msgid "Please connect wallet firstly"
 msgstr ""
 
@@ -211,16 +240,16 @@ msgid "Random Puzzle"
 msgstr ""
 
 #: src/components/Header/menu.tsx
-msgid "Rinkeby Test Network"
-msgstr ""
+#~ msgid "Rinkeby Test Network"
+#~ msgstr ""
 
 #: src/components/Labels/save.tsx
 msgid "Save"
 msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Save Model:"
-msgstr ""
+#~ msgid "Save Model:"
+#~ msgstr ""
 
 #: src/components/Labels/singup.tsx
 #~ msgid "Sign Up"
@@ -232,8 +261,8 @@ msgid "Submit"
 msgstr ""
 
 #: src/components/Wallet/wallet.tsx
-msgid "Switch"
-msgstr ""
+#~ msgid "Switch"
+#~ msgstr ""
 
 #: src/components/Wallet/wallet.tsx
 #~ msgid "Switch Wallet"
@@ -244,8 +273,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
-msgstr ""
+#~ msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
+#~ msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Token Address:"
@@ -253,6 +282,10 @@ msgstr ""
 
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Token Receiver:"
+msgstr ""
+
+#: src/components/Wallet/wallet.tsx
+msgid "Use ETH/BNB/MATIC"
 msgstr ""
 
 #: src/components/Labels/singup.tsx
@@ -272,7 +305,15 @@ msgid "VaultName&Password"
 msgstr ""
 
 #: src/components/Wallet/wallet.tsx
-msgid "Wallet"
+#~ msgid "Wallet"
+#~ msgstr ""
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "npub"
+msgstr ""
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "nsec"
 msgstr ""
 
 #: src/components/Header/seedlist.tsx

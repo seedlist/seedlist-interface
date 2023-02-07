@@ -33,6 +33,14 @@ export const labelState = atom(
 		default:"bitcoin"
 	}
 );
+
+export const nostrLabelState = atom(
+	{
+		key:"nostrLabelTag",
+		default:"nostr-puzzle"
+	}
+);
+
 export const networkState = atom(
 	{
 		key:"networkTag",
@@ -96,6 +104,13 @@ export const ethereumWalletState = atom(
 	}
 );
 
+export const NostrIdsState = atom(
+	{
+		key:"NostrIdsTag",
+		default:false
+	}
+);
+
 export const signupBtnIsLoadingState = atom(
 	{
 		key:"signupBtnIsLoadingTag",
@@ -106,6 +121,20 @@ export const signupBtnIsLoadingState = atom(
 export const saveBtnIsLoadingState = atom(
 	{
 		key:"saveBtnIsLoadingTag",
+		default:false
+	}
+);
+
+export const genNostridWaitingState = atom(
+	{
+		key:"genNostridWaitingTag",
+		default:false
+	}
+);
+
+export const genMoreNostridState = atom(
+	{
+		key:"genMoreNostridTag",
 		default:false
 	}
 );

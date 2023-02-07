@@ -5,7 +5,7 @@ import {Trans} from "@lingui/macro";
 import {IBaseProps} from "../../interfaces/props";
 import {NavLink, useLocation} from "react-router-dom"
 import {useRecoilState} from "recoil";
-import { pageState } from "../../hooks/Atoms";
+import {nostrLabelState, pageState, puzzleState, vaultNameState, vaultPasswordState} from "../../hooks/Atoms";
 import {labelState} from "../../hooks/Atoms";
 import {useDispatch, useSelector} from "react-redux";
 import {StateType} from "../../reducers/state";
@@ -16,9 +16,16 @@ const PageRouter:React.FC<IBaseProps> = (props:IBaseProps)=> {
 	const [vaultColor, setVaultActive] = useState<string>("");
 	const [walletColor, setWalletActive] = useState<string>("gray");
 	const [idColor, setIdActive] = useState<string>("gray");
+	const [NostrIdColor, setNostrIdActive] = useState<string>("gray");
 	const [, setPage] = useRecoilState(pageState)
 	const [, setLabel] = useRecoilState(labelState)
-	const [, setWalletGenerator] = useRecoilState(generatorState)
+	const [, setNostrLabel] = useRecoilState(nostrLabelState)
+	const [, setStateGenerator] = useRecoilState(generatorState)
+
+	const [, setPuzzle] = useRecoilState(puzzleState);
+	const [, setVaultName] = useRecoilState(vaultNameState);
+	const [, setPassword] = useRecoilState(vaultPasswordState);
+
 	const dispatch = useDispatch();
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	let location = useLocation()
@@ -26,8 +33,15 @@ const PageRouter:React.FC<IBaseProps> = (props:IBaseProps)=> {
 		setVaultActive("gray");
 		setWalletActive("gray");
 		setIdActive("gray");
+		setNostrIdActive("gray");
+		setPuzzle("");
+		setVaultName("");
+		setPassword("");
 		if(location.pathname==="/identity"){
 			setIdActive("")
+		}
+		if(location.pathname==="/nostrid"){
+			setNostrIdActive("")
 		}
 		if(location.pathname==="/brainwallet"){
 			setWalletActive("")
@@ -44,11 +58,17 @@ const PageRouter:React.FC<IBaseProps> = (props:IBaseProps)=> {
 			setIdActive("");
 			setPage("identity")
 		}
+		if(btn === "nostrid"){
+			setNostrIdActive("");
+			setPage("nostrid")
+			setNostrLabel("nostr-puzzle")
+			setStateGenerator("puzzle")
+		}
 		if(btn === "wallet"){
 			setWalletActive("");
 			setPage("wallet")
 			setLabel("bitcoin")
-			setWalletGenerator("puzzle")
+			setStateGenerator("puzzle")
 		}
 		if(btn==="vault"){
 			setVaultActive("");
@@ -78,6 +98,15 @@ const PageRouter:React.FC<IBaseProps> = (props:IBaseProps)=> {
 							</Button>
 						</NavLink>
 
+						<NavLink to="/nostrid">
+							<Button  bg="#2b2d32" colorScheme="blackAlpha" onClick={()=>clickButton("nostrid")}>
+								<Text fontSize="xl" color={NostrIdColor}>
+									<Trans>Nostr ID</Trans>
+								</Text>
+							</Button>
+						</NavLink>
+
+{/*
 						<NavLink to="/identity">
 							<Button  bg="#2b2d32" colorScheme="blackAlpha" onClick={()=>clickButton("identity")}>
 								<Text fontSize="xl" color={idColor}>
@@ -85,6 +114,7 @@ const PageRouter:React.FC<IBaseProps> = (props:IBaseProps)=> {
 								</Text>
 							</Button>
 						</NavLink>
+*/}
 					</ButtonGroup>
 				</Center>
 			</Box>

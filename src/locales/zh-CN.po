@@ -47,16 +47,24 @@ msgid "Address"
 msgstr "钱包地址"
 
 #: src/components/Header/routers.tsx
-msgid "AnyMap"
-msgstr ""
+#~ msgid "AnyMap"
+#~ msgstr ""
 
 #: src/components/Header/menu.tsx
-msgid "Arbitrum Mainnet"
-msgstr "Arbitrum主网"
+#~ msgid "Arbitrum Mainnet"
+#~ msgstr "Arbitrum主网"
 
 #: src/pages/donate/index.tsx
 msgid "BTC Donate Address"
 msgstr "比特币捐赠地址"
+
+#: src/components/Labels/nostr-puzzle.tsx
+msgid "Base on Puzzle"
+msgstr "基于秘密生成"
+
+#: src/components/Labels/nostr-vault.tsx
+msgid "Base on Vault"
+msgstr "基于保险库生成"
 
 #: src/components/Labels/bitcoin.tsx
 msgid "Bitcoin"
@@ -75,11 +83,12 @@ msgstr "脑地址"
 #~ msgstr "脑钱包"
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Bridge Model"
-msgstr "桥接模式"
+#~ msgid "Bridge Model"
+#~ msgstr "桥接模式"
 
 #: src/components/Dialog/BitcoinAddress.tsx
 #: src/components/Dialog/EthereumAddress.tsx
+#: src/components/Dialog/NostrIds.tsx
 #: src/components/Dialog/PasswordInQuery.tsx
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Cancel"
@@ -102,12 +111,16 @@ msgid "Donate Me"
 msgstr "捐赠"
 
 #: src/components/Footer/index.tsx
-msgid "Download Zip"
-msgstr "本地运行"
+#~ msgid "Download Zip"
+#~ msgstr "本地运行"
 
 #: src/pages/donate/index.tsx
-msgid "ETH(ERC20) Donate Address"
-msgstr "以太坊(ERC20)捐赠地址"
+#~ msgid "ETH(ERC20) Donate Address"
+#~ msgstr "以太坊(ERC20)捐赠地址"
+
+#: src/pages/donate/index.tsx
+msgid "ETH/BNB/MATIC Donate Address"
+msgstr "ETH/BNB/MATIC 捐赠地址"
 
 #: src/components/Labels/ethereum.tsx
 msgid "Ethereum"
@@ -118,8 +131,8 @@ msgid "Ethereum Address:"
 msgstr "以太坊地址:"
 
 #: src/components/Header/menu.tsx
-msgid "Ethereum Mainnet"
-msgstr "以太坊主网"
+#~ msgid "Ethereum Mainnet"
+#~ msgstr "以太坊主网"
 
 #: src/components/Footer/index.tsx
 msgid "Forum"
@@ -130,8 +143,8 @@ msgid "Github"
 msgstr "源码"
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Hidden Model"
-msgstr "隐蔽模式"
+#~ msgid "Hidden Model"
+#~ msgstr "隐蔽模式"
 
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "I want to mint seed incentive token"
@@ -141,6 +154,7 @@ msgstr "存储时，我愿意参与激励通证铸造"
 msgid "Let's Create"
 msgstr "开始创建"
 
+#: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/wallet.tsx
 msgid "Let's Generate"
 msgstr "开始生成"
@@ -170,9 +184,24 @@ msgstr "开始存储"
 msgid "More Address"
 msgstr "更多地址"
 
+#: src/components/Dialog/NostrIds.tsx
+msgid "More Id"
+msgstr "更多 Id"
+
+#: src/components/Header/routers.tsx
+msgid "Nostr ID"
+msgstr ""
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "Nostr Id:"
+msgstr ""
+
+#: src/components/Buttons/nostrid.tsx
+#: src/components/Buttons/query.tsx
 #: src/components/Buttons/save.tsx
 #: src/components/Buttons/signup.tsx
 #: src/components/Buttons/unconnect.tsx
+#: src/components/Buttons/wallet.tsx
 msgid "Please connect wallet firstly"
 msgstr "请您提前连接钱包"
 
@@ -195,16 +224,16 @@ msgid "Random Puzzle"
 msgstr "基于用户自输入内容"
 
 #: src/components/Header/menu.tsx
-msgid "Rinkeby Test Network"
-msgstr "Rinkeby测试网"
+#~ msgid "Rinkeby Test Network"
+#~ msgstr "Rinkeby测试网"
 
 #: src/components/Labels/save.tsx
 msgid "Save"
 msgstr "存储"
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "Save Model:"
-msgstr "存储模式:"
+#~ msgid "Save Model:"
+#~ msgstr "存储模式:"
 
 #: src/components/Labels/singup.tsx
 #~ msgid "Sign Up"
@@ -216,12 +245,12 @@ msgid "Submit"
 msgstr "提交"
 
 #: src/components/Wallet/wallet.tsx
-msgid "Switch"
-msgstr "切换"
+#~ msgid "Switch"
+#~ msgstr "切换"
 
 #: src/components/Dialog/PasswordInSave.tsx
-msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
-msgstr "这是一个面向高级用户的操作，如果您想使用它，请联系开发者:"
+#~ msgid "This is an operation for advanced users, if you want to use it, please contact the developer:"
+#~ msgstr "这是一个面向高级用户的操作，如果您想使用它，请联系开发者:"
 
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Token Address:"
@@ -230,6 +259,10 @@ msgstr "通证地址:"
 #: src/components/Dialog/PasswordInSave.tsx
 msgid "Token Receiver:"
 msgstr "通证接收者:"
+
+#: src/components/Wallet/wallet.tsx
+msgid "Use ETH/BNB/MATIC"
+msgstr "使用 ETH/BNB/MATIC"
 
 #: src/components/Labels/singup.tsx
 msgid "User have to create a private vault before save or query content."
@@ -248,8 +281,16 @@ msgid "VaultName&Password"
 msgstr "基于已注册的保险库"
 
 #: src/components/Wallet/wallet.tsx
-msgid "Wallet"
-msgstr "钱包"
+#~ msgid "Wallet"
+#~ msgstr "钱包"
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "npub"
+msgstr ""
+
+#: src/components/Dialog/NostrIds.tsx
+msgid "nsec"
+msgstr ""
 
 #: src/components/Header/seedlist.tsx
 msgid "version"

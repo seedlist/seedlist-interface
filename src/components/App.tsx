@@ -13,6 +13,7 @@ import {NotFound} from "../pages/error/404";
 import {Donate} from "../pages/donate";
 import {License} from "../pages/license";
 import {Document} from "../pages/docs";
+import {NostrId} from "../pages/nostrid";
 
 const App:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
@@ -29,6 +30,7 @@ const App:React.FC<IBaseProps> = (props:IBaseProps)=>{
 							<Route path="/vault" element={<Vault />}> </Route>
 							<Route path="/brainwallet" element={<Brainwallet />}> </Route>
 							<Route path="/identity" element={<Identity />}> </Route>
+							<Route path="/nostrid" element={<NostrId />}> </Route>
 							<Route path="/*" element={<NotFound />}> </Route>
 							<Route path="/donate" element={<Donate />}> </Route>
 							<Route path="/document" element={<Document />}> </Route>

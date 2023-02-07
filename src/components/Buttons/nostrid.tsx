@@ -6,8 +6,8 @@ import {useRecoilState} from "recoil";
 import {
 	bitcoinWalletState, chainIdState,
 	ethereumWalletState,
-	generatorState,
-	labelState, languageState,
+	generatorState, genNostridWaitingState,
+	labelState, languageState, NostrIdsState, nostrLabelState,
 	vaultNameState,
 	vaultPasswordState
 } from "../../hooks/Atoms";
@@ -19,19 +19,19 @@ import {WarningIcon} from "@chakra-ui/icons";
 import {useSelector} from "react-redux";
 import {StateType} from "../../reducers/state";
 
-const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
+const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
-	const [label,] = useRecoilState(labelState)
+	const [label,] = useRecoilState(nostrLabelState)
 	const [puzzle,] = useRecoilState(puzzleState)
 	const [vaultName,] = useRecoilState(vaultNameState);
 	const [password, ] = useRecoilState(vaultPasswordState);
-	const [, setBitcoinWallet] = useRecoilState(bitcoinWalletState);
-	const [, setEthereumWallet] = useRecoilState(ethereumWalletState);
+	const [, setNostrIdsState] = useRecoilState(NostrIdsState);
 	const [generator, ] = useRecoilState(generatorState);
 	const [lang, ] = useRecoilState(languageState)
 	const [chainId, ] = useRecoilState(chainIdState);
 	const warningToast = useWarningToast()
 	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [isGenNostridWaiting, setIsGenNostridWaiting] = useRecoilState<boolean>(genNostridWaitingState);
 
 	const doClick = useCallback(async ()=>{
 		if(generator === "puzzle"){
@@ -42,6 +42,7 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				if(lang==="en-US"){
 					warningToast("Puzzle not allow empty")
 				}
+				setIsGenNostridWaiting(false);
 				return;
 			}
 
@@ -52,12 +53,13 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				if(lang==="en-US"){
 					warningToast("Puzzle length must more than 16 chars")
 				}
+				setIsGenNostridWaiting(false);
 				return;
 			}
 		}
 
-		if(generator === "entropy"){
-			setIsLoading(true);
+		if(generator === "vault"){
+			setIsGenNostridWaiting(true);
 			if(vaultName==="" || password==="" || vaultName===undefined || password===undefined){
 				if(lang==="zh-CN"){
 					warningToast("保险库名称及密码不许为空")
@@ -65,7 +67,7 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				if(lang==="en-US"){
 					warningToast("Vault name and password not allow empty")
 				}
-				setIsLoading(false);
+				setIsGenNostridWaiting(false);
 				return;
 			}
 
@@ -82,7 +84,7 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				if(lang === "zh-CN"){
 					warningToast("钱包连接出错")
 				}
-				setIsLoading(false);
+				setIsGenNostridWaiting(false);
 				return;
 			}
 
@@ -97,38 +99,20 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				if(lang==="zh-CN"){
 					warningToast("保险库空间不存在，请先注册");
 				}
-				setIsLoading(false);
+				setIsGenNostridWaiting(false);
 				return;
 			}
 
 		}
 
-		if(label==="ethereum"){
-			setEthereumWallet(true);
-			setBitcoinWallet(false);
+		if(label==="nostr-vault" || label==="nostr-puzzle"){
+			setIsGenNostridWaiting(true);
+			setNostrIdsState(true);
+			console.log("isGenNostridWaiting:", isGenNostridWaiting);
 		}
-		if(label==="bitcoin"){
-			setBitcoinWallet(true);
-			setEthereumWallet(false);
-		}
-		setIsLoading(false);
-	},[label, puzzle, generator, lang, vaultName, password, chainId])
-
-/*
-	return(
-		<Button
-			colorScheme="blackAlpha"
-			fontSize="xl"
-			onClick={()=>doClick()}
-			isLoading={isLoading}
-			w="100%"
-		>
-			<Trans>Let's Generate </Trans>
-		</Button>
-	);
-
-*/
-
+		console.log("isGenNostridWaiting:", isGenNostridWaiting);
+		//setIsLoading(false);
+	},[label, puzzle,isGenNostridWaiting, generator, lang, vaultName, password, chainId])
 
 	const activeButton = useMemo(()=>{
 		return(
@@ -136,14 +120,14 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				colorScheme="blackAlpha"
 				fontSize="xl"
 				onClick={()=>doClick()}
-				isLoading={isLoading}
+				isLoading={isGenNostridWaiting}
 				w="100%"
 			>
 				<Trans>Let's Generate </Trans>
 			</Button>
 		);
 
-	},[doClick, isLoading]);
+	},[doClick, isGenNostridWaiting]);
 
 	const inactiveButton = useMemo(()=>{
 		return(
@@ -161,8 +145,9 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
 	return(
 		<>
+
 			{isConnection===true && activeButton}
-			{isConnection!==true && generator==="entropy" && inactiveButton}
+			{isConnection!==true && generator==="vault" && inactiveButton}
 			{isConnection!==true && generator==="puzzle" && activeButton}
 		</>
 	);
@@ -170,4 +155,4 @@ const WalletButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
 }
 
-export {WalletButton};
+export {NostridGeneratorButton};
