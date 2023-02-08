@@ -39,7 +39,7 @@ const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				<Stack spacing={2} width={"450px"}>
 					<TextInput
 						placeholder={phraseHolder}
-						type={'text'}
+						type={'password'}
 						value={puzzleValue}
 						onChange={handlePuzzleChange}
 					/>
