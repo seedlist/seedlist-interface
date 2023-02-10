@@ -48,9 +48,12 @@ const WalletInfo: React.FC<IBaseProps> = (props:IBaseProps) => {
 	},[walletInfo?.address])
 
 	useMemo(()=>{
-		if(chainId===walletInfo?.chainId){
+		console.log("chainid:", chainId);
+		console.log("walletInfo.chainId:", walletInfo?.chainId);
+		if(3666===walletInfo?.chainId){
 			dispatch(walletConnectionAction(action, true));
 		}else{
+			console.log("====================")
 			dispatch(walletConnectionAction(action, false));
 		}
 	}, [dispatch, walletInfo?.chainId, action, chainId]);

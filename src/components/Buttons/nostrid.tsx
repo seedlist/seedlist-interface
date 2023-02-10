@@ -148,8 +148,7 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 		<>
 
 			{isConnection===true && activeButton}
-			{isConnection!==true && generator==="vault" && inactiveButton}
-			{isConnection!==true && generator==="puzzle" && activeButton}
+			{isConnection===false && inactiveButton}
 		</>
 	);
 
