@@ -108,10 +108,8 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 		if(label==="nostr-vault" || label==="nostr-puzzle"){
 			setIsGenNostridWaiting(true);
 			setNostrIdsState(true);
-			console.log("isGenNostridWaiting:", isGenNostridWaiting);
 		}
-		console.log("isGenNostridWaiting:", isGenNostridWaiting);
-		//setIsLoading(false);
+
 	},[label, puzzle,isGenNostridWaiting, generator, lang, vaultName, password, chainId])
 
 	const activeButton = useMemo(()=>{

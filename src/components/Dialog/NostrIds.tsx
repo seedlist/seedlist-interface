@@ -40,7 +40,6 @@ const NostrIds:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	useMemo(()=>{
 		setOpen(isNostrIdsState);
 		if(isNostrIdsState===false) {
-			console.log("11111111111111111111111")
 			setIsGenNostridWaiting(false);
 			return;
 		}
