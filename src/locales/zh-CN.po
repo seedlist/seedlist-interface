@@ -67,6 +67,10 @@ msgid "Base on Vault"
 msgstr "基于保险库生成"
 
 #: src/pages/nostrid/index.tsx
+msgid "Bid Without Regrets"
+msgstr "落 拍 无 悔"
+
+#: src/pages/nostrid/index.tsx
 msgid "Bidding"
 msgstr "正在竞价"
 
@@ -104,8 +108,8 @@ msgstr "取消"
 
 #: src/pages/nostrid/index.tsx
 #: src/pages/nostrid/index.tsx
-msgid "Coming"
-msgstr "即将开始"
+#~ msgid "Coming"
+#~ msgstr "即将开始"
 
 #: src/components/Wallet/wallet.tsx
 #~ msgid "Connect Wallet"
@@ -160,6 +164,11 @@ msgstr "以太坊地址:"
 #: src/pages/nostrid/index.tsx
 msgid "Finished"
 msgstr "竞价结束"
+
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Following"
+msgstr "即将开始"
 
 #: src/components/Footer/index.tsx
 #~ msgid "Forum"
@@ -337,8 +346,8 @@ msgstr "基于已注册的保险库"
 #~ msgstr "钱包"
 
 #: src/pages/nostrid/index.tsx
-msgid "chess without regrets"
-msgstr "自 由 参 拍，落 棋 无 悔"
+#~ msgid "chess without regrets"
+#~ msgstr "自 由 参 拍，落 棋 无 悔"
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "npub"

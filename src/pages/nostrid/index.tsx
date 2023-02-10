@@ -15,12 +15,12 @@ const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
 			<Container>
 				<Center>
 					<Text fontSize="4xl" fontWeight="extrabold">
-					<Trans>chess without regrets </Trans>
+					<Trans>Bid Without Regrets</Trans>
 					</Text>
 				</Center>
 
 
-				<Center>
+				<Center marginY="12px">
 						<Box bgColor="#2b2d32" p="5" w="95%" maxW="lg" borderRadius="8" >
 							<Stack spacing={6} w="100%">
 								<Center>
@@ -36,28 +36,28 @@ const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
 								<Flex >
 									<Center flex="1" h="22px" fontWeight="extrabold"> google.j </Center>
 									<Spacer />
-									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Finished </Trans></Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Finished</Trans></Center>
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Deal</Trans> ￥217</Center>
 								</Flex>
 								<Flex backgroundColor="#975A16">
-									<Center flex="1" h="22px" fontWeight="extrabold"> amazon.j </Center>
+									<Center flex="1" h="22px" fontWeight="extrabold">amazon.j</Center>
 									<Spacer />
-									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Bidding </Trans></Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Bidding</Trans></Center>
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Now</Trans> ￥311</Center>
 								</Flex>
 								<Flex>
 									<Center flex="1" h="22px" fontWeight="extrabold"> openai.j </Center>
 									<Spacer />
-									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Coming </Trans></Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Following</Trans></Center>
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Init</Trans> ￥10</Center>
 								</Flex>
 								<Flex>
-									<Center flex="1" h="22px" fontWeight="extrabold"> joule.j </Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"> facebook.j </Center>
 									<Spacer />
-									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Coming</Trans></Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Following</Trans></Center>
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Init</Trans> ￥50</Center>
 								</Flex>

@@ -75,6 +75,10 @@ msgid "Base on Vault"
 msgstr ""
 
 #: src/pages/nostrid/index.tsx
+msgid "Bid Without Regrets"
+msgstr ""
+
+#: src/pages/nostrid/index.tsx
 msgid "Bidding"
 msgstr ""
 
@@ -112,8 +116,8 @@ msgstr ""
 
 #: src/pages/nostrid/index.tsx
 #: src/pages/nostrid/index.tsx
-msgid "Coming"
-msgstr ""
+#~ msgid "Coming"
+#~ msgstr ""
 
 #: src/components/Wallet/wallet.tsx
 #~ msgid "Connect Wallet"
@@ -171,6 +175,11 @@ msgstr ""
 #: src/pages/nostrid/index.tsx
 #: src/pages/nostrid/index.tsx
 msgid "Finished"
+msgstr ""
+
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Following"
 msgstr ""
 
 #: src/components/Footer/index.tsx
@@ -361,8 +370,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/pages/nostrid/index.tsx
-msgid "chess without regrets"
-msgstr ""
+#~ msgid "chess without regrets"
+#~ msgstr ""
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "npub"
