@@ -1,12 +1,13 @@
 import { Text, HStack, Container } from "@chakra-ui/layout";
 import styled from "@emotion/styled";
-import {Link} from "@chakra-ui/react";
+import {Alert, AlertIcon, Link, ListIcon} from "@chakra-ui/react";
 import React, {useMemo, useState} from "react";
 import {IBaseProps} from "../../interfaces/props";
 import {Trans} from "@lingui/macro";
 import {NavLink} from "react-router-dom";
 import {useRecoilState} from "recoil";
 import {languageState} from "../../hooks/Atoms";
+import {CheckCircleIcon} from "@chakra-ui/icons";
 
 const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 	const [lang, ] = useRecoilState(languageState);
@@ -23,19 +24,25 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
   return (
     <FooterContainer maxW="container.xl" centerContent>
       <HStack py={5} wrap="wrap" spacing={6}>
+	      <Link href="https://github.com/raceopen" target="_blank">
+		      <HStack spacing={2}>
+			      <Text fontSize="1xl" fontWeight="">
+				      <Trans>Github</Trans>: v1.0
+			      </Text>
+		      </HStack>
+	      </Link>
 	      <HStack spacing={2}>
 		      <Text fontSize="1xl" fontWeight="">
 			      <Trans>Copyright © 2023 OpenRace</Trans>
 		      </Text>
 	      </HStack>
 
-		  <Link href="https://github.com/raceopen" target="_blank">
-			  <HStack spacing={2}>
-				  <Text fontSize="1xl" fontWeight="">
-					  <Trans>Github</Trans>: v1.0
-				  </Text>
-			  </HStack>
-		  </Link>
+	      <HStack spacing={2}>
+		      <Text fontSize="1xl" fontWeight="">
+			      <Trans>Relay</Trans> <CheckCircleIcon color="green" boxSize={3}/>
+		      </Text>
+	      </HStack>
+
 
 
 {/*

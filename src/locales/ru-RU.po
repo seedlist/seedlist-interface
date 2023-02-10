@@ -282,6 +282,10 @@ msgstr ""
 msgid "Random Puzzle"
 msgstr ""
 
+#: src/components/Footer/index.tsx
+msgid "Relay"
+msgstr ""
+
 #: src/components/Header/menu.tsx
 #~ msgid "Rinkeby Test Network"
 #~ msgstr ""

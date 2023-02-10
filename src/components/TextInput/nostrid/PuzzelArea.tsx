@@ -5,10 +5,13 @@ import {puzzleState} from "../../../hooks/Atoms";
 import {languageState} from "../../../hooks/Atoms";
 import {Box, Stack, VStack} from "@chakra-ui/layout";
 import {TextInput} from "../textinput";
+import {useSelector} from "react-redux";
+import {StateType} from "../../../reducers/state";
 
 const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [puzzleValue, setPuzzleValue] = useState<string>("")
 	const [, setPuzzle] = useRecoilState(puzzleState)
+	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	const handlePuzzleChange = (event: React.FormEvent<HTMLInputElement>)=>{
 		setPuzzleValue(event.currentTarget.value)
 		setPuzzle(event.currentTarget.value)
@@ -40,6 +43,7 @@ const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 					<TextInput
 						placeholder={phraseHolder}
 						type={'number'}
+						disabled={!isConnection}
 						value={puzzleValue}
 						onChange={handlePuzzleChange}
 					/>

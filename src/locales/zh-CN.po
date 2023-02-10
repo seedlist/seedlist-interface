@@ -266,6 +266,10 @@ msgstr "竞价列表"
 msgid "Random Puzzle"
 msgstr "基于用户自输入内容"
 
+#: src/components/Footer/index.tsx
+msgid "Relay"
+msgstr "中继器"
+
 #: src/components/Header/menu.tsx
 #~ msgid "Rinkeby Test Network"
 #~ msgstr "Rinkeby测试网"
@@ -310,7 +314,7 @@ msgstr "通证接收者:"
 #: src/components/Wallet/wallet.tsx
 #: src/components/Wallet/wallet.tsx
 msgid "Use Joule Mainnet"
-msgstr "连接焦耳网络"
+msgstr "连接Joule网络"
 
 #: src/components/Labels/singup.tsx
 msgid "User have to create a private vault before save or query content."
