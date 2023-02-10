@@ -18,11 +18,11 @@ const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [phraseHolder, setPhraseHolder]	= useState<string>("enter your stronger phrase ...")
 	useMemo(()=>{
 		if(lang==='zh-CN'){
-			setPhraseHolder("请输入一个足够健壮的密码短语 ...")
+			setPhraseHolder("请输入amazon.j竞标价 ...")
 		}
 
 		if(lang==='en-US'){
-			setPhraseHolder("enter your stronger puzzle ...")
+			setPhraseHolder("enter amazon.j price ...")
 		}
 	},[lang])
 
@@ -39,7 +39,7 @@ const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				<Stack spacing={2} width={"450px"}>
 					<TextInput
 						placeholder={phraseHolder}
-						type={'password'}
+						type={'number'}
 						value={puzzleValue}
 						onChange={handlePuzzleChange}
 					/>

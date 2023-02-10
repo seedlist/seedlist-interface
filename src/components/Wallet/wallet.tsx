@@ -21,6 +21,7 @@ const WalletInfo: React.FC<IBaseProps> = (props:IBaseProps) => {
 	const [chainName, setChainName] = useState<string>("")
 
 	useMemo(()=>{
+/*
 		if(walletInfo?.networkName==="bnb"){
 			setChainName("BNB")
 			setChainId(56)
@@ -33,7 +34,12 @@ const WalletInfo: React.FC<IBaseProps> = (props:IBaseProps) => {
 			setChainName("MATIC")
 			setChainId(137)
 		}
-	},[walletInfo?.networkName])
+*/
+		if(walletInfo?.chainId===3666){
+			setChainName("Joule");
+			setChainId(3666);
+		}
+	},[walletInfo?.chainId])
 
 	useMemo(()=>{
 		if(walletInfo?.address!==undefined){
@@ -80,10 +86,10 @@ const WalletInfo: React.FC<IBaseProps> = (props:IBaseProps) => {
 	            {walletInfo && walletInfo.chainId === chainId&&(<>{chainName}</>)}
 	            <Image src="./metamask.svg" width="22" height="22" />
 
-                { !walletInfo && <div> <Trans> Connect Wallet </Trans> </div>}
+                { !walletInfo && <div> <Trans> Use Joule Mainnet</Trans> </div>}
 
                 {walletInfo && walletInfo.chainId !== chainId && (
-	                <div> <Trans>Use ETH/BNB/MATIC</Trans> </div>
+	                <div> <Trans>Use Joule Mainnet</Trans> </div>
                 )}
 
                 {walletInfo && walletInfo.chainId === chainId &&(

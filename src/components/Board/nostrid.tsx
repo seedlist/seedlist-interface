@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Center, HStack, Stack} from "@chakra-ui/layout";
+import {Box, Center, HStack, Stack, Text} from "@chakra-ui/layout";
 import {IBaseProps} from "../../interfaces/props";
 import {WalletLabels} from "../Labels/wallet";
 import {useRecoilState} from "recoil";
@@ -19,10 +19,12 @@ const NostridBoard:React.FC<IBaseProps>=(props:IBaseProps)=>{
 			<Stack marginY="10px">
 				<Box bgColor="#2b2d32" p="5" w="100%" maxW="lg" borderRadius="8" >
 					<Stack spacing={6}>
+{/*
 						<ButtonGroup>
 							<NostrPuzzleLabel />
 							<NostrVaultLabel />
 						</ButtonGroup>
+*/}
 
 						{generator==='puzzle' && <NostridPuzzleArea />}
 						{generator==='vault' && <NostridVaultArea />}

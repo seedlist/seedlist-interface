@@ -23,8 +23,13 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
   return (
     <FooterContainer maxW="container.xl" centerContent>
       <HStack py={5} wrap="wrap" spacing={6}>
+	      <HStack spacing={2}>
+		      <Text fontSize="1xl" fontWeight="">
+			      <Trans>Copyright © 2023 OpenRace</Trans>
+		      </Text>
+	      </HStack>
 
-		  <Link href="https://github.com/seedlist" target="_blank">
+		  <Link href="https://github.com/raceopen" target="_blank">
 			  <HStack spacing={2}>
 				  <Text fontSize="1xl" fontWeight="">
 					  <Trans>Github</Trans>: v1.0
@@ -32,14 +37,8 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 			  </HStack>
 		  </Link>
 
-	      <Link href="https://www.reddit.com/r/seedlist" target="_blank">
-			  <HStack spacing={2}>
-				  <Text fontSize="1xl" fontWeight="">
-					  <Trans>Forum</Trans>
-				  </Text>
-			  </HStack>
-	      </Link>
 
+{/*
 	      <Link href={docLink} target="_blank">
 		      <HStack spacing={2}>
 				  <Text fontSize="1xl" fontWeight="">
@@ -63,6 +62,7 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 			      </Text>
 		      </HStack>
 	      </NavLink>
+*/}
 
       </HStack>
     </FooterContainer>

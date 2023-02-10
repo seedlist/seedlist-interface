@@ -66,6 +66,10 @@ msgstr "基于秘密生成"
 msgid "Base on Vault"
 msgstr "基于保险库生成"
 
+#: src/pages/nostrid/index.tsx
+msgid "Bidding"
+msgstr "正在竞价"
+
 #: src/components/Labels/bitcoin.tsx
 msgid "Bitcoin"
 msgstr "比特币"
@@ -75,8 +79,8 @@ msgid "Bitcoin Address:"
 msgstr "比特币地址"
 
 #: src/components/Header/routers.tsx
-msgid "Brain Address"
-msgstr "脑地址"
+#~ msgid "Brain Address"
+#~ msgstr "脑地址"
 
 #: src/components/Header/routers.tsx
 #~ msgid "Brain Wallet"
@@ -86,6 +90,10 @@ msgstr "脑地址"
 #~ msgid "Bridge Model"
 #~ msgstr "桥接模式"
 
+#: src/pages/nostrid/index.tsx
+#~ msgid "CHESS WITHOUT REGRETS"
+#~ msgstr ""
+
 #: src/components/Dialog/BitcoinAddress.tsx
 #: src/components/Dialog/EthereumAddress.tsx
 #: src/components/Dialog/NostrIds.tsx
@@ -94,21 +102,35 @@ msgstr "脑地址"
 msgid "Cancel"
 msgstr "取消"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Coming"
+msgstr "即将开始"
+
 #: src/components/Wallet/wallet.tsx
-msgid "Connect Wallet"
-msgstr "连接钱包"
+#~ msgid "Connect Wallet"
+#~ msgstr "连接钱包"
+
+#: src/components/Footer/index.tsx
+msgid "Copyright © 2023 OpenRace"
+msgstr "版权 © 2023 OpenRace"
 
 #: src/components/Labels/singup.tsx
 msgid "Create Vault"
 msgstr "创建私库"
 
-#: src/components/Footer/index.tsx
-msgid "Docs"
-msgstr "文档"
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Deal"
+msgstr "成交"
 
 #: src/components/Footer/index.tsx
-msgid "Donate Me"
-msgstr "捐赠"
+#~ msgid "Docs"
+#~ msgstr "文档"
+
+#: src/components/Footer/index.tsx
+#~ msgid "Donate Me"
+#~ msgstr "捐赠"
 
 #: src/components/Footer/index.tsx
 #~ msgid "Download Zip"
@@ -134,9 +156,14 @@ msgstr "以太坊地址:"
 #~ msgid "Ethereum Mainnet"
 #~ msgstr "以太坊主网"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Finished"
+msgstr "竞价结束"
+
 #: src/components/Footer/index.tsx
-msgid "Forum"
-msgstr "论坛"
+#~ msgid "Forum"
+#~ msgstr "论坛"
 
 #: src/components/Footer/index.tsx
 msgid "Github"
@@ -150,11 +177,15 @@ msgstr "源码"
 msgid "I want to mint seed incentive token"
 msgstr "存储时，我愿意参与激励通证铸造"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Init"
+msgstr "初价"
+
 #: src/components/Buttons/signup.tsx
 msgid "Let's Create"
 msgstr "开始创建"
 
-#: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/wallet.tsx
 msgid "Let's Generate"
 msgstr "开始生成"
@@ -162,6 +193,10 @@ msgstr "开始生成"
 #: src/components/Buttons/query.tsx
 msgid "Let's Query"
 msgstr "开始查询"
+
+#: src/components/Buttons/nostrid.tsx
+msgid "Let's Race"
+msgstr "开始竞价"
 
 #: src/components/Buttons/save.tsx
 msgid "Let's Save"
@@ -189,12 +224,16 @@ msgid "More Id"
 msgstr "更多 Id"
 
 #: src/components/Header/routers.tsx
-msgid "Nostr ID"
-msgstr ""
+#~ msgid "Nostr ID"
+#~ msgstr ""
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "Nostr Id:"
 msgstr ""
+
+#: src/pages/nostrid/index.tsx
+msgid "Now"
+msgstr "现价"
 
 #: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/query.tsx
@@ -218,6 +257,10 @@ msgstr "用户私钥"
 #: src/components/Labels/query.tsx
 msgid "Query"
 msgstr "查找"
+
+#: src/pages/nostrid/index.tsx
+msgid "Race List"
+msgstr "竞价列表"
 
 #: src/components/menu/brainwallet.tsx
 msgid "Random Puzzle"
@@ -261,8 +304,13 @@ msgid "Token Receiver:"
 msgstr "通证接收者:"
 
 #: src/components/Wallet/wallet.tsx
-msgid "Use ETH/BNB/MATIC"
-msgstr "使用 ETH/BNB/MATIC"
+#~ msgid "Use ETH/BNB/MATIC"
+#~ msgstr "使用 ETH/BNB/MATIC"
+
+#: src/components/Wallet/wallet.tsx
+#: src/components/Wallet/wallet.tsx
+msgid "Use Joule Mainnet"
+msgstr "连接焦耳网络"
 
 #: src/components/Labels/singup.tsx
 msgid "User have to create a private vault before save or query content."
@@ -273,8 +321,8 @@ msgstr "在存储和查询之前，用户需要先在以太坊链上，创建私
 #~ msgstr "在存储和查询之前，用户需要先在以太坊链上，注册保险库空间名称"
 
 #: src/components/Header/routers.tsx
-msgid "Vault"
-msgstr "保险库"
+#~ msgid "Vault"
+#~ msgstr "保险库"
 
 #: src/components/menu/brainwallet.tsx
 msgid "VaultName&Password"
@@ -283,6 +331,10 @@ msgstr "基于已注册的保险库"
 #: src/components/Wallet/wallet.tsx
 #~ msgid "Wallet"
 #~ msgstr "钱包"
+
+#: src/pages/nostrid/index.tsx
+msgid "chess without regrets"
+msgstr "自 由 参 拍，落 棋 无 悔"
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "npub"

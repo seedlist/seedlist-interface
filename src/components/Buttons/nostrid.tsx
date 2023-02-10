@@ -18,6 +18,7 @@ import {CryptoMachine2022} from "../../lib/crypto";
 import {WarningIcon} from "@chakra-ui/icons";
 import {useSelector} from "react-redux";
 import {StateType} from "../../reducers/state";
+import {Center} from "@chakra-ui/layout";
 
 const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
@@ -37,15 +38,16 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 		if(generator === "puzzle"){
 			if(puzzle==="" || puzzle===undefined){
 				if(lang==="zh-CN"){
-					warningToast("密码短语不许为空")
+					warningToast("价格不许为空")
 				}
 				if(lang==="en-US"){
-					warningToast("Puzzle not allow empty")
+					warningToast("Price not allow empty")
 				}
 				setIsGenNostridWaiting(false);
 				return;
 			}
 
+/*
 			if(puzzle.length<16){
 				if(lang==="zh-CN"){
 					warningToast("密码短语长度最少16位")
@@ -56,6 +58,7 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				setIsGenNostridWaiting(false);
 				return;
 			}
+*/
 		}
 
 		if(generator === "vault"){
@@ -121,7 +124,7 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				isLoading={isGenNostridWaiting}
 				w="100%"
 			>
-				<Trans>Let's Generate </Trans>
+				<Trans>Let's Race </Trans>
 			</Button>
 		);
 

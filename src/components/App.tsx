@@ -22,11 +22,11 @@ const App:React.FC<IBaseProps> = (props:IBaseProps)=>{
                 <Heading>
                     <title>seedlist.org</title>
                 </Heading>
-                <Stack spacing={20}>
+                <Stack>
 					<Router>
 						<Header />
 						<Routes>
-							<Route path="/" element={ <Navigate to="/vault" />}> </Route>
+							<Route path="/" element={ <Navigate to="/nostrid" />}> </Route>
 							<Route path="/vault" element={<Vault />}> </Route>
 							<Route path="/brainwallet" element={<Brainwallet />}> </Route>
 							<Route path="/identity" element={<Identity />}> </Route>

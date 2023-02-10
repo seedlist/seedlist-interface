@@ -74,6 +74,10 @@ msgstr "Base on Puzzle"
 msgid "Base on Vault"
 msgstr "Base on Vault"
 
+#: src/pages/nostrid/index.tsx
+msgid "Bidding"
+msgstr "Bidding"
+
 #: src/components/Labels/bitcoin.tsx
 msgid "Bitcoin"
 msgstr "Bitcoin"
@@ -83,8 +87,8 @@ msgid "Bitcoin Address:"
 msgstr "Bitcoin Address:"
 
 #: src/components/Header/routers.tsx
-msgid "Brain Address"
-msgstr "Brain Address"
+#~ msgid "Brain Address"
+#~ msgstr "Brain Address"
 
 #: src/components/Header/routers.tsx
 #~ msgid "Brain Wallet"
@@ -94,6 +98,10 @@ msgstr "Brain Address"
 #~ msgid "Bridge Model"
 #~ msgstr "Bridge Model"
 
+#: src/pages/nostrid/index.tsx
+#~ msgid "CHESS WITHOUT REGRETS"
+#~ msgstr "CHESS WITHOUT REGRETS"
+
 #: src/components/Dialog/BitcoinAddress.tsx
 #: src/components/Dialog/EthereumAddress.tsx
 #: src/components/Dialog/NostrIds.tsx
@@ -102,21 +110,35 @@ msgstr "Brain Address"
 msgid "Cancel"
 msgstr "Cancel"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Coming"
+msgstr "Coming"
+
 #: src/components/Wallet/wallet.tsx
-msgid "Connect Wallet"
-msgstr "Connect Wallet"
+#~ msgid "Connect Wallet"
+#~ msgstr "Connect Wallet"
+
+#: src/components/Footer/index.tsx
+msgid "Copyright © 2023 OpenRace"
+msgstr "Copyright © 2023 OpenRace"
 
 #: src/components/Labels/singup.tsx
 msgid "Create Vault"
 msgstr "Create Vault"
 
-#: src/components/Footer/index.tsx
-msgid "Docs"
-msgstr "Docs"
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Deal"
+msgstr "Deal"
 
 #: src/components/Footer/index.tsx
-msgid "Donate Me"
-msgstr "Donate Me"
+#~ msgid "Docs"
+#~ msgstr "Docs"
+
+#: src/components/Footer/index.tsx
+#~ msgid "Donate Me"
+#~ msgstr "Donate Me"
 
 #: src/components/Footer/index.tsx
 #~ msgid "Download Zip"
@@ -146,9 +168,14 @@ msgstr "Ethereum Address:"
 #~ msgid "Ethereum Mainnet"
 #~ msgstr "Ethereum Mainnet"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Finished"
+msgstr "Finished"
+
 #: src/components/Footer/index.tsx
-msgid "Forum"
-msgstr "Forum"
+#~ msgid "Forum"
+#~ msgstr "Forum"
 
 #: src/components/Footer/index.tsx
 msgid "Github"
@@ -166,11 +193,15 @@ msgstr "I want to mint seed incentive token"
 #~ msgid "Identity"
 #~ msgstr "Identity"
 
+#: src/pages/nostrid/index.tsx
+#: src/pages/nostrid/index.tsx
+msgid "Init"
+msgstr "Init"
+
 #: src/components/Buttons/signup.tsx
 msgid "Let's Create"
 msgstr "Let's Create"
 
-#: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/wallet.tsx
 msgid "Let's Generate"
 msgstr "Let's Generate"
@@ -178,6 +209,10 @@ msgstr "Let's Generate"
 #: src/components/Buttons/query.tsx
 msgid "Let's Query"
 msgstr "Let's Query"
+
+#: src/components/Buttons/nostrid.tsx
+msgid "Let's Race"
+msgstr "Let's Race"
 
 #: src/components/Buttons/save.tsx
 msgid "Let's Save"
@@ -205,12 +240,16 @@ msgid "More Id"
 msgstr "More Id"
 
 #: src/components/Header/routers.tsx
-msgid "Nostr ID"
-msgstr "Nostr ID"
+#~ msgid "Nostr ID"
+#~ msgstr "Nostr ID"
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "Nostr Id:"
 msgstr "Nostr Id:"
+
+#: src/pages/nostrid/index.tsx
+msgid "Now"
+msgstr "Now"
 
 #: src/components/Buttons/nostrid.tsx
 #: src/components/Buttons/query.tsx
@@ -234,6 +273,10 @@ msgstr "PrivateKey"
 #: src/components/Labels/query.tsx
 msgid "Query"
 msgstr "Query"
+
+#: src/pages/nostrid/index.tsx
+msgid "Race List"
+msgstr "Race List"
 
 #: src/components/menu/brainwallet.tsx
 msgid "Random Puzzle"
@@ -285,8 +328,13 @@ msgid "Token Receiver:"
 msgstr "Token Receiver:"
 
 #: src/components/Wallet/wallet.tsx
-msgid "Use ETH/BNB/MATIC"
-msgstr "Use ETH/BNB/MATIC"
+#~ msgid "Use ETH/BNB/MATIC"
+#~ msgstr "Use ETH/BNB/MATIC"
+
+#: src/components/Wallet/wallet.tsx
+#: src/components/Wallet/wallet.tsx
+msgid "Use Joule Mainnet"
+msgstr "Use Joule Mainnet"
 
 #: src/components/Labels/singup.tsx
 msgid "User have to create a private vault before save or query content."
@@ -297,8 +345,8 @@ msgstr "User have to create a private vault before save or query content."
 #~ msgstr "User have to sign up a spacename before save or query content."
 
 #: src/components/Header/routers.tsx
-msgid "Vault"
-msgstr "Vault"
+#~ msgid "Vault"
+#~ msgstr "Vault"
 
 #: src/components/menu/brainwallet.tsx
 msgid "VaultName&Password"
@@ -307,6 +355,10 @@ msgstr "VaultName&Password"
 #: src/components/Wallet/wallet.tsx
 #~ msgid "Wallet"
 #~ msgstr "Wallet"
+
+#: src/pages/nostrid/index.tsx
+msgid "chess without regrets"
+msgstr "chess without regrets"
 
 #: src/components/Dialog/NostrIds.tsx
 msgid "npub"
