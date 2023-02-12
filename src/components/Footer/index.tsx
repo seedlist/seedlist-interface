@@ -7,7 +7,8 @@ import {Trans} from "@lingui/macro";
 import {NavLink} from "react-router-dom";
 import {useRecoilState} from "recoil";
 import {languageState} from "../../hooks/Atoms";
-import {CheckCircleIcon} from "@chakra-ui/icons";
+import {ChatIcon, CheckCircleIcon} from "@chakra-ui/icons";
+import {Button} from "@chakra-ui/button";
 
 const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 	const [lang, ] = useRecoilState(languageState);
@@ -24,7 +25,7 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
   return (
     <FooterContainer maxW="container.xl" centerContent>
       <HStack py={5} wrap="wrap" spacing={6}>
-	      <Link href="https://github.com/raceopen" target="_blank">
+	      <Link href="https://github.com/raceopen/openrace-interface" target="_blank">
 		      <HStack spacing={2}>
 			      <Text fontSize="1xl" fontWeight="">
 				      <Trans>Github</Trans>: v1.0
@@ -33,7 +34,10 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 	      </Link>
 	      <HStack spacing={2}>
 		      <Text fontSize="1xl" fontWeight="">
+{/*
 			      <Trans>Copyright © 2023 OpenRace</Trans>
+*/}
+			      ©OpenRace
 		      </Text>
 	      </HStack>
 
@@ -43,6 +47,16 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 		      </Text>
 	      </HStack>
 
+	      <HStack spacing={1}>
+		      <Button
+			      colorScheme="#1a1d22"
+			      width="60px"
+		      >
+		      <Text fontSize="1xl" fontWeight="">
+			      <Trans>Chat</Trans> <ChatIcon />
+		      </Text>
+		      </Button>
+	      </HStack>
 
 
 {/*
