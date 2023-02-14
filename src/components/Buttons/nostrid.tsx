@@ -1,119 +1,66 @@
-import React, {useCallback, useMemo, useState} from "react";
+import React, {useCallback, useMemo } from "react";
 import {Button} from "@chakra-ui/button";
 import {Trans} from "@lingui/macro";
 import {IBaseProps} from "../../interfaces/props";
 import {useRecoilState} from "recoil";
 import {
-	bitcoinWalletState, chainIdState,
-	ethereumWalletState,
+	biddingPriceState,
+	 chainIdState,
 	generatorState, genNostridWaitingState,
-	labelState, languageState, NostrIdsState, nostrLabelState,
-	vaultNameState,
-	vaultPasswordState
+	 languageState, nowPriceState,
 } from "../../hooks/Atoms";
 import {puzzleState} from "../../hooks/Atoms";
 import {useWarningToast} from "../../hooks/useToast";
-import {etherClient} from "../../ethers/etherClient";
-import {CryptoMachine2022} from "../../lib/crypto";
 import {WarningIcon} from "@chakra-ui/icons";
 import {useSelector} from "react-redux";
 import {StateType} from "../../reducers/state";
-import {Center} from "@chakra-ui/layout";
 
 const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
-	const [label,] = useRecoilState(nostrLabelState)
-	const [puzzle,] = useRecoilState(puzzleState)
-	const [vaultName,] = useRecoilState(vaultNameState);
-	const [password, ] = useRecoilState(vaultPasswordState);
-	const [, setNostrIdsState] = useRecoilState(NostrIdsState);
-	const [generator, ] = useRecoilState(generatorState);
 	const [lang, ] = useRecoilState(languageState)
 	const [chainId, ] = useRecoilState(chainIdState);
 	const warningToast = useWarningToast()
-	const [isLoading, setIsLoading] = useState<boolean>(false);
-	const [isGenNostridWaiting, setIsGenNostridWaiting] = useRecoilState<boolean>(genNostridWaitingState);
+	const [biddingPrice,] = useRecoilState(biddingPriceState);
+	const [nowPrice, setNowPrice] = useRecoilState(nowPriceState);
 
 	const doClick = useCallback(async ()=>{
-		if(generator === "puzzle"){
-			if(puzzle==="" || puzzle===undefined){
-				if(lang==="zh-CN"){
-					warningToast("价格不许为空")
-				}
-				if(lang==="en-US"){
-					warningToast("Price not allow empty")
-				}
-				setIsGenNostridWaiting(false);
-				return;
+		if(biddingPrice===0 || biddingPrice===undefined){
+			if(lang==="zh-CN"){
+				warningToast("价格不许为空")
 			}
-
-/*
-			if(puzzle.length<16){
-				if(lang==="zh-CN"){
-					warningToast("密码短语长度最少16位")
-				}
-				if(lang==="en-US"){
-					warningToast("Puzzle length must more than 16 chars")
-				}
-				setIsGenNostridWaiting(false);
-				return;
+			if(lang==="en-US"){
+				warningToast("Price not allow empty")
 			}
-*/
+			return;
 		}
 
-		if(generator === "vault"){
-			setIsGenNostridWaiting(true);
-			if(vaultName==="" || password==="" || vaultName===undefined || password===undefined){
-				if(lang==="zh-CN"){
-					warningToast("保险库名称及密码不许为空")
-				}
-				if(lang==="en-US"){
-					warningToast("Vault name and password not allow empty")
-				}
-				setIsGenNostridWaiting(false);
-				return;
+		if(biddingPrice <= nowPrice){
+			if(lang === "zh-CN"){
+				warningToast("出价必须高于当前价格");
 			}
 
-
-
-			etherClient.connectSeedlistContract()
-			etherClient.connectSigner()
-			if(!etherClient.client){
-				warningToast("connect signer error in signup")
-				if(lang === "en-US"){
-					warningToast("Wallet Maybe ERROR")
-				}
-
-				if(lang === "zh-CN"){
-					warningToast("钱包连接出错")
-				}
-				setIsGenNostridWaiting(false);
-				return;
+			if(lang === "en-US"){
+				warningToast("Bidding price need more than current");
 			}
 
-			let encryptor = new CryptoMachine2022(vaultName, password, chainId);
-			await encryptor.generateWallet(vaultName, password);
-			let params = await encryptor.calculateVaultHasRegisterParams();
-			let res = await etherClient.client?.vaultHasRegister(params.address, params.deadline, params.signature.r, params.signature.s, params.signature.v);
-			if(res === false){
-				if(lang === "en-US"){
-					warningToast("vault space does not exist, init firstly");
-				}
-				if(lang==="zh-CN"){
-					warningToast("保险库空间不存在，请先注册");
-				}
-				setIsGenNostridWaiting(false);
-				return;
-			}
+			return;
+		}
+		setNowPrice(biddingPrice);
 
+
+		if(lang === "zh-CN"){
+			warningToast("出价成功");
 		}
 
-		if(label==="nostr-vault" || label==="nostr-puzzle"){
-			setIsGenNostridWaiting(true);
-			setNostrIdsState(true);
+		if(lang === "en-US"){
+			warningToast("Bidding Price Success");
 		}
 
-	},[label, puzzle,isGenNostridWaiting, generator, lang, vaultName, password, chainId])
+		return;
+
+
+
+	},[biddingPrice, lang, chainId])
 
 	const activeButton = useMemo(()=>{
 		return(
@@ -121,14 +68,13 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				colorScheme="blackAlpha"
 				fontSize="xl"
 				onClick={()=>doClick()}
-				isLoading={isGenNostridWaiting}
 				w="100%"
 			>
 				<Trans>Let's Race </Trans>
 			</Button>
 		);
 
-	},[doClick, isGenNostridWaiting]);
+	},[doClick]);
 
 	const inactiveButton = useMemo(()=>{
 		return(

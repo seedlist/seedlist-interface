@@ -114,6 +114,14 @@ msgstr "Bitcoin Address:"
 msgid "Cancel"
 msgstr "Cancel"
 
+#: src/components/Footer/index.tsx
+msgid "Chat"
+msgstr "Chat"
+
+#: src/components/Dialog/Chatting.tsx
+msgid "Chat Board"
+msgstr "Chat Board"
+
 #: src/pages/nostrid/index.tsx
 #: src/pages/nostrid/index.tsx
 #~ msgid "Coming"
@@ -124,8 +132,8 @@ msgstr "Cancel"
 #~ msgstr "Connect Wallet"
 
 #: src/components/Footer/index.tsx
-msgid "Copyright © 2023 OpenRace"
-msgstr "Copyright © 2023 OpenRace"
+#~ msgid "Copyright © 2023 OpenRace"
+#~ msgstr "Copyright © 2023 OpenRace"
 
 #: src/components/Labels/singup.tsx
 msgid "Create Vault"
@@ -306,6 +314,10 @@ msgstr "Save"
 #: src/components/Dialog/PasswordInSave.tsx
 #~ msgid "Save Model:"
 #~ msgstr "Save Model:"
+
+#: src/components/Dialog/Chatting.tsx
+msgid "Send"
+msgstr "Send"
 
 #: src/components/Labels/singup.tsx
 #~ msgid "Sign Up"

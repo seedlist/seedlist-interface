@@ -1,27 +1,21 @@
 import { Text, HStack, Container } from "@chakra-ui/layout";
 import styled from "@emotion/styled";
-import {Alert, AlertIcon, Link, ListIcon} from "@chakra-ui/react";
-import React, {useMemo, useState} from "react";
+import {Link} from "@chakra-ui/react";
+import React, {useCallback} from "react";
 import {IBaseProps} from "../../interfaces/props";
 import {Trans} from "@lingui/macro";
-import {NavLink} from "react-router-dom";
 import {useRecoilState} from "recoil";
-import {languageState} from "../../hooks/Atoms";
+import {chatOpenState} from "../../hooks/Atoms";
 import {ChatIcon, CheckCircleIcon} from "@chakra-ui/icons";
 import {Button} from "@chakra-ui/button";
 
 const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
-	const [lang, ] = useRecoilState(languageState);
-	const [docLink, setDocLink] = useState("");
-	useMemo(()=>{
-		if(lang === "en-US"){
-			setDocLink("https://docs-en.seedlist.org");
-		}
+	const [isOpen, setChatOpen] = useRecoilState(chatOpenState);
 
-		if(lang === "zh-CN"){
-			setDocLink("https://docs.seedlist.org");
-		}
-	},[lang]);
+	const doClick = useCallback(()=>{
+		setChatOpen(!isOpen);
+	},[setChatOpen,isOpen])
+
   return (
     <FooterContainer maxW="container.xl" centerContent>
       <HStack py={5} wrap="wrap" spacing={6}>
@@ -51,39 +45,13 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
 		      <Button
 			      colorScheme="#1a1d22"
 			      width="60px"
+			      onClick={()=>doClick()}
 		      >
 		      <Text fontSize="1xl" fontWeight="">
 			      <Trans>Chat</Trans> <ChatIcon />
 		      </Text>
 		      </Button>
 	      </HStack>
-
-
-{/*
-	      <Link href={docLink} target="_blank">
-		      <HStack spacing={2}>
-				  <Text fontSize="1xl" fontWeight="">
-					 <Trans>Docs</Trans>
-				  </Text>
-			  </HStack>
-	      </Link>
-
-          <Link href="https://discord.gg/kQgg5kkpA5" target="_blank">
-			  <HStack spacing={2}>
-				  <Text fontSize="1xl" fontWeight="">
-					  Discord
-				  </Text>
-			  </HStack>
-          </Link>
-
-	      <NavLink to="/donate">
-		      <HStack spacing={2}>
-			      <Text fontSize="1xl" fontWeight="">
-				      <Trans>Donate Me </Trans>
-			      </Text>
-		      </HStack>
-	      </NavLink>
-*/}
 
       </HStack>
     </FooterContainer>

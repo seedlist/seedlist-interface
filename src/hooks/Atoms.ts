@@ -132,9 +132,29 @@ export const genNostridWaitingState = atom(
 	}
 );
 
+export const chatOpenState = atom(
+	{
+		key:"chatOpenStateTag",
+		default:false
+	}
+);
+
 export const genMoreNostridState = atom(
 	{
 		key:"genMoreNostridTag",
 		default:false
+	}
+);
+
+export const biddingPriceState = atom(
+	{
+		key:"biddingPriceTag",
+		default:311
+	}
+);
+export const nowPriceState = atom(
+	{
+		key:"nowPriceTag",
+		default:311
 	}
 );

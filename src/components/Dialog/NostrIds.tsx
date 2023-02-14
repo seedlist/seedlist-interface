@@ -13,12 +13,10 @@ import {IBaseProps} from "../../interfaces/props";
 import {Trans} from "@lingui/macro";
 import {useRecoilState} from "recoil";
 import {
-	bitcoinWalletState,
 	generatorState, genNostridWaitingState, NostrIdsState,
 	puzzleState, vaultNameState, vaultPasswordState
 } from "../../hooks/Atoms";
 import {QRCodeSVG} from 'qrcode.react';
-import {GenBitcoinBrainWalletByEntropy, GenBitcoinBrainWalletByPuzzle} from "../../lib/brainwallet";
 import {GenNostrIdByEntropy, GenNostrIdByPuzzle} from "../../lib/nostrid";
 
 const NostrIds:React.FC<IBaseProps> = (props:IBaseProps)=>{
@@ -31,12 +29,12 @@ const NostrIds:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [puzzle, ] = useRecoilState(puzzleState);
 	const [vaultName,] = useRecoilState(vaultNameState);
 	const [password, ] = useRecoilState(vaultPasswordState);
-	const [publickeys, setPublickeys] = useState<string[]>();
-	const [privkeys, setPrivkeys] =useState<string[]>();
+	const [, setPublickeys] = useState<string[]>();
+	const [, setPrivkeys] =useState<string[]>();
 	const [npubs, setNpubs] = useState<string[]>();
 	const [nsecs, setNsecs] =useState<string[]>();
 	const [step, setStep] = useState<number>(1);
-	const [isGenNostridWaiting, setIsGenNostridWaiting] = useRecoilState(genNostridWaitingState);
+	const [, setIsGenNostridWaiting] = useRecoilState(genNostridWaitingState);
 	useMemo(()=>{
 		setOpen(isNostrIdsState);
 		if(isNostrIdsState===false) {

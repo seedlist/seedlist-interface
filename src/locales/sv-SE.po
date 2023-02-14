@@ -114,6 +114,14 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: src/components/Footer/index.tsx
+msgid "Chat"
+msgstr ""
+
+#: src/components/Dialog/Chatting.tsx
+msgid "Chat Board"
+msgstr ""
+
 #: src/pages/nostrid/index.tsx
 #: src/pages/nostrid/index.tsx
 #~ msgid "Coming"
@@ -124,8 +132,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/Footer/index.tsx
-msgid "Copyright © 2023 OpenRace"
-msgstr ""
+#~ msgid "Copyright © 2023 OpenRace"
+#~ msgstr ""
 
 #: src/components/Labels/singup.tsx
 msgid "Create Vault"
@@ -306,6 +314,10 @@ msgstr ""
 #: src/components/Dialog/PasswordInSave.tsx
 #~ msgid "Save Model:"
 #~ msgstr ""
+
+#: src/components/Dialog/Chatting.tsx
+msgid "Send"
+msgstr ""
 
 #: src/components/Labels/singup.tsx
 #~ msgid "Sign Up"

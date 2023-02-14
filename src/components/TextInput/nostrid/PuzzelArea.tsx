@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from "react";
 import {IBaseProps} from "../../../interfaces/props";
 import {useRecoilState} from "recoil";
-import {puzzleState} from "../../../hooks/Atoms";
+import {biddingPriceState} from "../../../hooks/Atoms";
 import {languageState} from "../../../hooks/Atoms";
 import {Box, Stack, VStack} from "@chakra-ui/layout";
 import {TextInput} from "../textinput";
@@ -10,15 +10,16 @@ import {StateType} from "../../../reducers/state";
 
 const NostridPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [puzzleValue, setPuzzleValue] = useState<string>("")
-	const [, setPuzzle] = useRecoilState(puzzleState)
+	const [, setPrice] = useRecoilState(biddingPriceState)
+
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	const handlePuzzleChange = (event: React.FormEvent<HTMLInputElement>)=>{
 		setPuzzleValue(event.currentTarget.value)
-		setPuzzle(event.currentTarget.value)
+		setPrice(Number(event.currentTarget.value))
 	}
 
 	const [lang, ] = useRecoilState(languageState)
-	const [phraseHolder, setPhraseHolder]	= useState<string>("enter your stronger phrase ...")
+	const [phraseHolder, setPhraseHolder]	= useState<string>("enter bidding price...")
 	useMemo(()=>{
 		if(lang==='zh-CN'){
 			setPhraseHolder("请输入amazon.j竞标价 ...")

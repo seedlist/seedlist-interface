@@ -1,15 +1,14 @@
-import React from "react";
-import {Box, Center, Container, HStack, Stack, Text} from "@chakra-ui/layout";
+import React  from "react";
+import {Box, Center, Container, Stack, Text} from "@chakra-ui/layout";
 import { IBaseProps } from "../../interfaces/props";
-import {Flex, Image, Spacer} from "@chakra-ui/react";
+import {Flex, Spacer} from "@chakra-ui/react";
 import {NostridBoard} from "../../components/Board/nostrid";
 import {Trans} from "@lingui/macro";
-import {NostridPuzzleArea} from "../../components/TextInput/nostrid/PuzzelArea";
-import {NostridVaultArea} from "../../components/TextInput/nostrid/VaultArea";
-import {NostridGeneratorButton} from "../../components/Buttons/nostrid";
-import {NostrIds} from "../../components/Dialog/NostrIds";
+import {useRecoilState} from "recoil";
+import {nowPriceState} from "../../hooks/Atoms";
 
 const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
+	const [nowPrice, ] = useRecoilState(nowPriceState);
 	return(
 		<Center>
 			<Container>
@@ -45,7 +44,7 @@ const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Bidding</Trans></Center>
 									<Spacer />
-									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Now</Trans> ￥311</Center>
+									<Center flex="1" h="22px" fontWeight="extrabold"><Trans>Now</Trans> ￥{nowPrice}</Center>
 								</Flex>
 								<Flex>
 									<Center flex="1" h="22px" fontWeight="extrabold"> openai.j </Center>
