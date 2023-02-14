@@ -19,10 +19,10 @@ const Footer:React.FC<IBaseProps>=(props:IBaseProps)=>{
   return (
     <FooterContainer maxW="container.xl" centerContent>
       <HStack py={5} wrap="wrap" spacing={6}>
-	      <Link href="https://github.com/raceopen/openrace-interface" target="_blank">
+	      <Link href="http://jnsdao.com" target="_blank">
 		      <HStack spacing={2}>
 			      <Text fontSize="1xl" fontWeight="">
-				      <Trans>Github</Trans>: v1.0
+				      <Trans>JNSDAO</Trans>
 			      </Text>
 		      </HStack>
 	      </Link>
