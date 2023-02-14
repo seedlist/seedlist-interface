@@ -1,4 +1,4 @@
-import React  from "react";
+import React, {useMemo, useState} from "react";
 import {Box, Center, Container, Stack, Text} from "@chakra-ui/layout";
 import { IBaseProps } from "../../interfaces/props";
 import {Flex, Spacer} from "@chakra-ui/react";
@@ -7,8 +7,13 @@ import {Trans} from "@lingui/macro";
 import {useRecoilState} from "recoil";
 import {nowPriceState} from "../../hooks/Atoms";
 
-const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
+const Openrace:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [nowPrice, ] = useRecoilState(nowPriceState);
+	let colors =["red","#975A16", "green","orange"];
+	const [index, setIndex] = useState(0)
+	useMemo(()=>{
+		setIndex((index+1)%4);
+	},[nowPrice])
 	return(
 		<Center>
 			<Container>
@@ -39,7 +44,7 @@ const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Deal</Trans> ￥217</Center>
 								</Flex>
-								<Flex backgroundColor="#975A16">
+								<Flex backgroundColor={colors[index]}>
 									<Center flex="1" h="22px" fontWeight="extrabold">amazon.j</Center>
 									<Spacer />
 									<Center flex="1" h="22px" fontWeight="extrabold"> <Trans>Bidding</Trans></Center>
@@ -69,4 +74,4 @@ const NostrId:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	);
 }
 
-export {NostrId};
+export {Openrace};
