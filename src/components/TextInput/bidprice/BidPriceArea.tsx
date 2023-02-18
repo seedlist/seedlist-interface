@@ -1,28 +1,32 @@
 import React, {useMemo, useState} from "react";
 import {IBaseProps} from "../../../interfaces/props";
 import {useRecoilState} from "recoil";
-import {puzzleState} from "../../../hooks/Atoms";
+import {biddingPriceState} from "../../../hooks/Atoms";
 import {languageState} from "../../../hooks/Atoms";
 import {Box, Stack, VStack} from "@chakra-ui/layout";
 import {TextInput} from "../textinput";
+import {useSelector} from "react-redux";
+import {StateType} from "../../../reducers/state";
 
-const WalletPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
+const BidPriceArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const [puzzleValue, setPuzzleValue] = useState<string>("")
-	const [, setPuzzle] = useRecoilState(puzzleState)
+	const [, setPrice] = useRecoilState(biddingPriceState)
+
+	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	const handlePuzzleChange = (event: React.FormEvent<HTMLInputElement>)=>{
 		setPuzzleValue(event.currentTarget.value)
-		setPuzzle(event.currentTarget.value)
+		setPrice(Number(event.currentTarget.value))
 	}
 
 	const [lang, ] = useRecoilState(languageState)
-	const [phraseHolder, setPhraseHolder]	= useState<string>("enter your stronger phrase ...")
+	const [phraseHolder, setPhraseHolder]	= useState<string>("enter bidding price...")
 	useMemo(()=>{
 		if(lang==='zh-CN'){
-			setPhraseHolder("请输入一个足够健壮的密码短语 ...")
+			setPhraseHolder("请输入amazon.j竞标价 ...")
 		}
 
 		if(lang==='en-US'){
-			setPhraseHolder("enter your stronger puzzle ...")
+			setPhraseHolder("enter amazon.j price ...")
 		}
 	},[lang])
 
@@ -39,7 +43,8 @@ const WalletPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 				<Stack spacing={2} width={"450px"}>
 					<TextInput
 						placeholder={phraseHolder}
-						type={'password'}
+						type={'number'}
+						disabled={!isConnection}
 						value={puzzleValue}
 						onChange={handlePuzzleChange}
 					/>
@@ -49,4 +54,4 @@ const WalletPuzzleArea:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
 	);
 }
-export {WalletPuzzleArea};
+export {BidPriceArea};

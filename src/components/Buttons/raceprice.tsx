@@ -15,7 +15,7 @@ import {WarningIcon} from "@chakra-ui/icons";
 import {useSelector} from "react-redux";
 import {StateType} from "../../reducers/state";
 
-const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
+const RacePriceButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 	const isConnection = useSelector((state:StateType)=>state.walletConnection);
 	const [lang, ] = useRecoilState(languageState)
 	const [chainId, ] = useRecoilState(chainIdState);
@@ -101,4 +101,4 @@ const NostridGeneratorButton:React.FC<IBaseProps> = (props:IBaseProps)=>{
 
 }
 
-export {NostridGeneratorButton};
+export {RacePriceButton};

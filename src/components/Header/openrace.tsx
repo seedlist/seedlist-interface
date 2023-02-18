@@ -1,11 +1,11 @@
 import {HStack, Text} from "@chakra-ui/layout";
 import React, {useCallback, useState} from "react";
 import {IBaseProps} from "../../interfaces/props";
-import {Menu, MenuButton, MenuItem, MenuList, IconButton} from "@chakra-ui/react";
-import {ChevronDownIcon, HamburgerIcon} from "@chakra-ui/icons";
+import {Menu, MenuButton, IconButton} from "@chakra-ui/react";
+import {HamburgerIcon} from "@chakra-ui/icons";
 import {Trans} from "@lingui/macro";
 
-const Seedlist:React.FC<IBaseProps>=(props:IBaseProps) => {
+const Openrace:React.FC<IBaseProps>=(props:IBaseProps) => {
 	const [version, setVersion] = useState<string>("1.0");
 	const doSelectVersion = useCallback((value:string)=>{
 			setVersion(value);
@@ -37,4 +37,4 @@ const Seedlist:React.FC<IBaseProps>=(props:IBaseProps) => {
     );
 }
 
-export {Seedlist};
+export {Openrace};

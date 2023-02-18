@@ -54,22 +54,6 @@ const Menus:React.FC<IBaseProps> = (props:IBaseProps) =>{
 					_focus={{ boxShadow: 'outline', bg:"#2b2d32" }}
 				/>
 				<MenuList maxWidth='100px' bgColor={"#2b2d32"} borderColor={"black"}>
-{/*
-					<MenuOptionGroup defaultValue='bnb' title={networkTitle} type='radio'>
-						<MenuItemOption _hover={{ bg: 'blackAlpha.500'}} value='bnb' onClick={()=>doClickNetwork("bnb")}>
-						  <Trans> BSC Network </Trans>
-						</MenuItemOption>
-						<MenuItemOption isDisabled={true} _hover={{ bg: 'blackAlpha.500'}} value='homestead' onClick={()=>doClickNetwork("homestead")}>
-							<Trans> Ethereum Mainnet </Trans>
-						</MenuItemOption>
-						<MenuItemOption isDisabled={true} _hover={{ bg: 'blackAlpha.500'}} value='matic' onClick={()=>doClickNetwork("matic")}>
-							<Trans> Polygon Mainnet </Trans>
-						</MenuItemOption>
-					</MenuOptionGroup>
-*/}
-{/*
-					<MenuDivider />
-*/}
 					<MenuOptionGroup defaultValue='english' title={langTitle} type='radio'>
 						<MenuItemOption onClick={()=>{doClickLanguage("zh-CN")}} _hover={{ bg: 'blackAlpha.500'}} value='chinese'>中文</MenuItemOption>
 						<MenuItemOption onClick={()=>{doClickLanguage("en-US")}} _hover={{ bg: 'blackAlpha.500'}} value='english'>English</MenuItemOption>

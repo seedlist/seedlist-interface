@@ -2,7 +2,7 @@ import React, {useMemo, useState} from "react";
 import {Box, Center, Container, Stack, Text} from "@chakra-ui/layout";
 import { IBaseProps } from "../../interfaces/props";
 import {Flex, Spacer} from "@chakra-ui/react";
-import {NostridBoard} from "../../components/Board/nostrid";
+import {BidBoard} from "../../components/Board/bid";
 import {Trans} from "@lingui/macro";
 import {useRecoilState} from "recoil";
 import {nowPriceState} from "../../hooks/Atoms";
@@ -68,7 +68,7 @@ const Openrace:React.FC<IBaseProps> = (props:IBaseProps)=>{
 							</Stack>
 						</Box>
 				</Center>
-				<NostridBoard />
+				<BidBoard />
 			</Container>
 		</Center>
 	);
